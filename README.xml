@@ -1,0 +1,508 @@
+<changelog>
+	<v1.x.x>LRP2013
+		<v1.1.x>+pilot
+			<v1.1.1>
+				<a>
+					Isolated the header, and is located in a separate file (header.php, stdheader.php, stdheadercp.php)
+				</a>
+				<b>
+					Isolated the authentication check, also located in a separate file (authcheck.php, authcheckcp.php)
+				</b>
+				<c>
+					Cleaned up unused files.
+				</c>
+			</v1.1.1>
+		</v1.1.x>
+		<v1.2.x>+cookies
+			<v1.2.1>
+				<a>
+					Added cookies, cookie-authentication, and session/cookie expiration (setcookie.php, authcheck.php, authcheck.php)
+				</a>
+			</v1.2.1>
+		</v1.2.x>
+		<v1.3.x>+form validation
+			<v1.3.1>
+				<a>
+					Form validation for new attendee/pre-registration, and My Account update (formvalidator.js)
+				</a>
+			</v1.3.1>
+		</v1.3.x>
+		<v1.4.x>+viewattendeedetails
+			<v1.4.1>
+				<a>
+					View attendee details (attendee_info.php)
+				</a>
+			</v1.4.1>
+		</v1.4.x>
+		<v1.5.x>+evaluation form
+			<v1.5.1>
+				<a>
+					Evaluation form per session (evaluationform.php)
+				</a>
+			</v1.5.1>
+		</v1.5.x>
+		<v1.6.x>+log, +documentation
+			<v1.6.1>
+				<a>
+					Log functionality (log.php)
+				</a>
+			</v1.6.1>
+			<v1.6.2>
+				Created README.xml
+				<a>
+					Isolated the manual configuration (manualconfig.php)
+					<a.1>
+						for manual configurations such as event_id: new attendee, assignning session to speaker
+					</a.1>
+					<a.2>
+						for evaluation form configuration: no. of questions, question texts
+					</a.2>
+				</a>
+			</v1.6.2>
+		</v1.6.x>
+		<v1.7.x>+user session authorization
+			<v1.7.1>
+				User session authorization - added set users' session authorization functionality in control panel; added column 'sessionslist' VARCHAR(250) to attendee table;
+			</v1.7.1>
+			<v1.7.2>
+				<a>
+					User's schedule selection is limited to authorized sessions only
+				</a>
+				<b>
+					User's speaker viewing is limited to speakers to authorized sessions only
+				</b>
+				<c>
+					Display current user session authorization in control panel; check/uncheck all contents of the: table/row;
+				</c>
+			</v1.7.2>
+		</v1.7.x>
+		<v1.8.x>+better scaled (for mobile version), +edit session, +edit event
+			<v1.8.1>
+				Edit Session/Event
+			</v1.8.1>
+			<v1.8.2>
+				My Account > Edit Profile > pre-fill the form with available data.
+			</v1.8.2>
+			<v1.8.3>
+				<a>
+					Created event selector for Session->Speaker; removed the inclusion of manualconfig.php for 'sessionspeaker.php'
+				</a>
+				<a>
+					Created event selector (eventselector.php) for 'moderatesession.php', 'newalert.php', 'usersessionauth.php', 'newevent.php', 'newsession.php', 'newspeaker.php', 'sessionspeaker.php', 'editevent.php', and 'editsession.php'
+				</a>
+				<b>
+					Created session selector (sessionselector.php) for 'moderatesession.php', and 'editsession.php'
+				</b>
+			</v1.8.3>
+		</v1.8.x>
+	</v1.x.x>
+	<v2.x.x>LRP2013
+		<v2.1.x>
+			<v2.1.1>-add attendee, +reset password, +filter in 'usersessionauth.php', -title, division, and company field in 'myaccount_update.php'
+				<a>
+					Display # of slots available in session listing (in 'schedule.php')
+				</a>
+				<b>
+					Disabled the editing of title, division, and company field in 'myaccount_update.php'
+				</b>
+				<c>
+					Reset Password per event (optional per attendee) - replaced 'New Attendee'
+				</c>
+				<d>
+					Filter per division/per title in 'usersessionauth.php'
+				</d>
+			</v2.1.1>
+			<v2.1.2>+multiple registration
+				Multiple confirmation for sessions (in 'schedule.php')
+			</v2.1.2>
+			<v2.1.3>+new ui for schedule, +display optional sessions, +schedule confirmation functions
+				<a>
+					Changed UI for 'schedule.php'
+				</a>
+				<b>
+					Display optional sessions (in 'schedule.php')
+				</b>
+				<c>
+					For optional sessions, disabled confirmation image button (in 'session.php')
+				</c>
+				<d>
+					Made functions for Add to My Schedule, and Remove from My Schedule (in 'functions.php')
+				</d>
+			</v2.1.3>
+			<v2.1.4>+pictures of attendees are mapped in the filesystem - based on their employee_id
+				Pictures of attendees are mapped in the filesystem - based on their employee_id
+			</v2.1.4>
+			<v2.1.5>+new attendee, +edit speaker profile
+				<a>
+					Returned the New Attendee functionality (in 'cpmetro.php');
+				</a>
+				<b>
+					Edit Speaker Profile
+				</b>
+			</v2.1.5>
+		</v2.1.x>
+		<v2.2.x>
+			<v2.2.1>+search,+game,+message filter,+view filtered messages
+				<a>
+					Updated the search functionality (in 'attendees.php', 'speakers.php', and in 'day1reg.php') - displays the search term in the search box
+				</a>
+				<b>
+					Day 1 Registration i.e. confirmation of attendance (created 'day1reg.php' and 'p_day1reg.php')
+				</b>
+				<c>
+					Game input (answer page); game answer viewer; current game and item # setter;
+				</c>
+				<d>
+					Message/question/feedback filtering in 'sessionmoderator.php'
+				</d>
+				<e>
+					View filtered messages/questions/feedbacks in 'viewfilteredmessages.php'
+				</e>
+			</v2.2.1>
+			<v2.2.2>+watermark popup
+				<a>
+					Patches for the games, and game moderating functionalities.
+				</a>
+				<b>
+					Live streaming function (embed code - to do on the fly)
+				</b>
+				<c>
+					Added watermark popup.
+				</c>
+			</v2.2.2>
+			<v2.2.3>+contact persons
+				<a>
+					Added Contact Persons in 'helpinfo.php' including 'helpinfo_team.php'
+				</a>
+				<b>
+					Fixed watermark popup to be fixed (known issue: mobile devices, not static)
+				</b>
+			</v2.2.3>
+		</v2.2.x>
+		<v2.3.x>
+			<v2.3.1>+day filter
+				<a>
+					Added per day filter (in 'schedule.php')
+				</a>
+				<b>
+					Display date and time of sessions (in 'speaker_info.php')
+				</b>
+				<c>
+					Display time only of sessions (in 'schedule.php')
+				</c>
+				<d>
+					Formatted better for mobile
+				</d>
+			</v2.3.1>
+		</v2.3.x>
+		<v2.4.x>
+			<v2.4.1>+go to current session,+select/deselect all,+append '@unilab.com.ph' in login
+				<a>
+					Add Go To Current Session (in 'index.php')
+				</a>
+				<b>
+					Add isactive field (in 'editsession.php')
+				</b>
+				<c>
+					Add select/deselect all sessions (in 'schedule.php')
+				</c>
+				<d>
+					Add names (in 'helpinfo_team.php')
+				</d>
+				<e>
+					If confirmed, allow download (in 'session.php')
+				</e>
+				<f>
+					Append '@unilab.com.ph' automatically if there's no '@domain.com'
+				</f>
+				<g>
+					Only buttons having withconfirmation=1 will have the confirmation button, and attendees/slots displayed in the schedule/session page
+				</g>
+			</v2.4.1>
+			<v2.4.2>+expanded search,updated condition to be able to download presmat
+				<a>
+					Added division as a search parameter (in 'attendees.php')
+				</a>
+				<b>
+					"View All" or "Clear Search Results" (in 'attendees.php', and 'speakers.php')
+				</b>
+				<c>
+					If the presentation material is uploaded for a session, only then will the user be allowed to download.
+				</c>
+				<d>
+					Historical Back
+				</d>
+			</v2.4.2>
+			<v2.4.3>+speaker pic in filesystem
+				<a>
+					Reverted to the old 'back' function
+				</a>
+				<b>
+					Speaker's profile picture will not be stored in the db, but in the filesystem instead; Add an imagename (or imagelocation) field in the speakertable ("images/idspeakers/[filename].[extension]")
+				</b>
+				<c>
+					Conversion from game_no, and item_no to game_id, and item_id
+				</c>
+				<d>
+					Updated the New Speaker, and Edit Speaker in Control Panel
+				</d>
+			</v2.4.3>
+			<v2.4.4>updated condition to be able to download presmat
+				<a>
+					If already confirmed for a session, and the session is tagged withconfirmation=0 after, the user is still allowed to download the presmats
+				</a>
+				<b>
+					Patched the games functionality - recognizes only the sessionmoderator's entry with answer = '[Current Game ID and Item No.]' as games.
+				</b>
+			</v2.4.4>
+		</v2.4.x>
+	</v2.x.x>
+	<v3.x.x>
+		<v3.1.x>LRP2013
+			<v3.1.1>+shift from p_[string],+shared images/ folder resource,+updated write-ups
+				<a>
+					Shift from p_[string] to process functions (new '_process.php' and '_processcp.php')
+				</a>
+				<b>
+					Moved the images/ folder one directory above - for shared resources
+				</b>
+				<c>
+					Added filter class
+				</c>
+				<d>
+					Live streaming, and session evaluation hidden.
+				</d>
+				<e>
+					Updated write-ups (in 'details.php', and in 'help_info.php')
+				</e>
+			</v3.1.1>
+			<v3.1.2>+ie restriction,+contact persons in optional sessions
+				<a>
+					If IE, no redirect (in 'index.php')
+				</a>
+				<b>
+					ABIG contact persons (in 'session.php')
+				</b>
+				<c>
+					Header labels can now redirect as well (in 'header.php')
+				</c>
+			</v3.1.2>
+			<v3.1.3>+profile pic upload,+e-mail functionality
+				<a>
+					Updated 'about1.php'
+				</a>
+				<b>
+					Allowed editing of title in 'myaccount_update.php'
+				</b>
+				<c>
+					Uploading of profile picture
+				</c>
+				<d>
+					E-mail function (in 'functions.php')
+				</d>
+			</v3.1.3>
+			<v3.1.4>+mobile formatting
+				<a>
+					Formatting patch for mobile
+				</a>
+			</v3.1.4>
+			<v3.1.5>+timestamp adjustment, +attendee details, +session details
+				<a>
+					Timestamp adjustment for log, and games (+13hours)
+				</a>
+				<b>
+					Renamed 'class.php', 'functions.php', and 'setcookie.php' with underscore prefix
+				</b>
+				<c>
+					Attendee details, attendee's schedule (new 'viewattendeedetails.php', in 'cpmetro.php')
+				</c>
+				<d>
+					Session details, session's attendees
+				</d>
+			</v3.1.5>
+			<v3.1.6>-profile pic upload,
+				<a>
+					Timestamp adjustment for log, and games (+15hours)
+				</a>
+				<b>
+					Disabled profile picture upload
+				</b>
+				<c>
+					UX improvements
+				</c>
+			</v3.1.6>
+			<v3.1.7>+day1/..., sessionmoderator->admin/1a2b3c
+				<a>
+					sessionmoderator -> admin/1a2b3c
+				</a>
+				<b>
+					day1/newattendee2.php -> creates new attendee
+					day1/confirmplenary2.php -> if not yet confirmed in any plenary session, confirm all; else, do nothing
+					day1/present.php -> tag day1present field in attendee as 1
+				</b>
+			</v3.1.7>
+			<v3.1.8>+IE 10 formatting
+				<a>
+					Enterprise Risk Management Survey
+				</a>
+				<b>
+					Formatted better for Internet Explorer 10 users
+				</b>
+			</v3.1.8>
+			<v3.1.9>+code enhancements, +mobile formatting
+				<a>
+					Code enhancements
+				</a>
+				<b>
+					Mobile formatting
+				</b>
+				<c>
+					Trapping for Enterprise Risk Management Survey
+				</c>
+				<d>
+					Enterprise Risk Management Survey Analysis (Desktop) 
+				</d>
+			</v3.1.9>
+			<v3.1.10>+ie9 and below image display
+				<a>
+					Display images for IE 9 and lower
+				</a>
+				<b>
+					Mobile formatting
+				</b>
+				<c>
+					Separate evaluation form questions for session_id = 22
+				</c>
+			</v3.1.10>
+			<v3.1.11>+evalform questions,+new ermsurvey db table schema,+ermsurvey data trapping and capture
+				<a>
+					Set questions for evaluation form
+				</a>
+				<b>
+					New ermsurvey db table structure
+				</b>
+				<c>
+					ERM Survey enhancements
+				</c>
+			</v3.1.11>
+			<v3.1.12>+ERM Survey Update
+				Updated the 3rd page for ERM Survey
+			</v3.1.12>
+			<v3.1.13>+ERM Survey Update
+				Updated the risk checklist for ERM Survey for mobile devices
+			</v3.1.13>
+			<v3.1.14>+ERM Survey Update
+				Updated the ERM Survey Analysis page, and added a new db table `ermsurveysummary`
+			</v3.1.14>
+			<v3.1.15>(LRP 2013 Day 1 am)
+				<a>
+					Updated the rules for a user to take the ERM Survey
+				</a>
+				<b>
+					Opened the evaluation form tool
+				</b>
+			</v3.1.15>
+			<v3.1.16>+Improved File Upload/Download
+				Improved File Upload/Download
+			</v3.1.16>
+			<v3.1.17>+Disabled Go To Current Session, and Session Evaluation modules
+				<a>
+					Disabled "go to current session", and session evaluation functionality
+				</a>
+				<b>
+					Added "(FOR UNILAB USE ONLY)" string in download div
+				</b>
+			</v3.1.17>
+			<v3.1.18>+Temporarily opened ERM Survey (LRP 2013)
+				Opened ERM survey to all to those who have not yet answered.
+			</v3.1.18>
+			<v3.1.19>+Log when downloading files 
+				<a>
+					Included log when downloading files.
+				</a>
+				<b>
+					Fixed the log for ERM Survey
+				</b>
+			</v3.1.19>
+		</v3.1.x>
+		<v3.2.x>LRP2014
+			<v3.2.1>
+				+ In Admin Control Panel, able to send scripted email - ignoring the recipients, subject, and message controls - to attendees with event_id = to the selected event in the dropdown control, and access = 1 (see _functions.php: fnSendEmailWithMime(), and _processcp: fnScriptPreregEmail())
+				+ In Admin Control Panel, Set User Authorization, included all sessions for the selected event in the first column
+				+ In event_listing.php, dislay image with filesystem source
+				+ In index.php, dislay image with filesystem source
+				+ In index.php, hide the games module
+				+ Updated the image location for the IDs, and IDSpeakers
+				+ Updated the detail.php, and helpinfo.php, content is found in the event_specific directory (see about.php, helpinfo_app.php, helpinfo_team.php
+			</v3.2.1>
+			<v3.2.2>
+				+ Updated the Programme.jpg in the ../images/others/2/ directory
+				+ Added 3 files (about.php, helpinfo_app.php, and helpinfo_team.php) in the event_specific directory in both desktop, and mobile directories
+			</v3.2.2>
+			<v3.2.3>
+				+ Created content for the helpinfo_team.php
+				+ Created content for the about.php
+				+ Created content for the helpinfo_app.php
+			</v3.2.3>
+			<v3.2.4>
+				+ Fixed attendees query
+				+ In login, updated the Password label to "Password (default is Employee ID):"
+				+ Added picture of boss EVA in event_specific/2/about.php
+				+ String replace of "ñ" to "&ntilde;", and "Ñ" to "&Ntilde;" in attendees, attendee_info, speakers, speaker_info
+			</v3.2.4>
+			<v3.2.5>
+				+ Hid the Go To Current Session link in index.php
+				+ Updated verify.php: removed redirect, and have its own page instead
+			</v3.2.5>
+			<v3.2.6>
+				+ Added confirmattendance.php in day1 directory
+				+ Updated rules on email script: send email to those with access, and not yet preregistered
+			</v3.2.6>
+			<v3.2.7>
+				+ If session is a plenary session, or a segment review session, display evaluation form. (still hidden as of now)
+				+ Updated verify.php, if verified, confirm schedule to plenary sessions
+			</v3.2.7>
+			<v3.2.8>
+				+ Patched verify.php, on session confirmation
+			</v3.2.8>
+			<v3.2.9>
+				+ Patched fnDownloadFile function in _process.php, try to open the file in a new window, else, display in current window
+				+ Updated confirmattendance.php
+			</v3.2.9>
+			<v3.2.10>
+				+ Updated the set authorization function in _processcp.php
+				+ Updated the query in viewsessiondetails.php on retrieving attendees
+				+ Updated the imgloc in viewattendeedetails.php for displaying user photo
+				+ Added speaker filter
+			</v3.2.10>
+		</v3.2.x>
+		<v3.3.x>LRP2014
+			<v3.3.1>
+				+ Added speaker filter
+			</v3.3.1>
+			<v3.3.2>
+				+ Added PDBA favicon
+			</v3.3.2>
+			<v3.3.3>
+				+ Patched verify.php in desktop/ (removed redirect)
+				+ Added presmat files in files/2/
+				+ Enabled auto-refresh every 60 seconds in moderatesession.php
+			</v3.3.3>
+			<v3.3.4>
+				+ Enabled Go To Current Session Functionality
+				+ Enabled Evaluation Form module in session.php
+			</v3.3.4>
+			<v3.3.5>
+				+ Disabled Go To Current Session Functionality
+			</v3.3.5>
+			<v3.3.6>LAST COMMITTED,ACTIVE
+				+ Updated schedule.php so that the distinct dates are properly sorted by startdate
+				+ Updated newalert.php, and script.js so that instead of a 160 character limit, it allows 500 characters
+				+ Updated _process.php, on sending email messages (before: auto-script, now: as it is)
+			</v3.3.6>
+		</v3.3.x>
+	</v3.x.x>
+</changelog>
+<author>
+	Justin V. Ambata
+</author>
